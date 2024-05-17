@@ -1,0 +1,31 @@
+---
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+
+<button class="button text-sm text-violet-200 bg-violet-700 rounded-full hover:text-violet-700 dark:bg-gray-800 dark:text-white/80">
+  <!-- <span class="button-content"> </span>  -->
+  <p class="text"> {title}</p>
+  </button>
+
+
+<style>
+  .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  outline: 2px rgb(109 40 217) solid;
+  outline-offset: -2px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+.button:hover {
+  background-color: transparent;
+}
+  
+    </style>
