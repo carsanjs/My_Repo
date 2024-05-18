@@ -1,7 +1,7 @@
 ---
-import SobreMy from "../components/Sobremi/SobreMy.astro"
-import Proyects from "../components/Proyects/Proyects.astro"
-import ButtonDT from "../components/Button/ButtonDT.astro"
+import SobreMy from "../components/Sobremi/SobreMy.astro";
+import Proyects from "../components/Proyects/Proyects.astro";
+import ButtonDT from "../components/Button/ButtonDT.astro";
 ---
 
 <main class="px-4">
@@ -33,10 +33,7 @@ import ButtonDT from "../components/Button/ButtonDT.astro"
               >
                 Disponible para trabajar
               </div> -->
-             <ButtonDT
-             title="Disponible para trabajar"
-             /> 
-
+              <ButtonDT title="Disponible para trabajar" />
             </span>
           </div>
         </a>
@@ -47,12 +44,14 @@ import ButtonDT from "../components/Button/ButtonDT.astro"
         Hey, soy carlos sanchez
       </h1>
       <p
-        class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+        class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-violet-700 [&>strong]:font-semibold dark:text-gray-300"
       >
         &lt;1 años de experiencia.
-        <strong
-          >Ingeniero de Sistemas y Desarrollador Web
-        </strong> de Aguachica - Cesar, Colombia 🇪s.
+        <strong>Ingeniero de Sistemas </strong> y<strong>
+          Desarrollador Web</strong
+        >
+        de Aguachica - Cesar, 
+        <span class="text-yellow-500">Col</span><span class="text-blue-700">omb</span><span class="text-red-700">ia</span> 🇪s<em class="text-violet-700">.</em>
       </p>
       <nav class="flex flex-wrap gap-4 mt-8">
         <a
@@ -110,14 +109,13 @@ import ButtonDT from "../components/Button/ButtonDT.astro"
     </div>
   </section>
   <div class="space-y-24">
-  <Proyects
-  description="Se desarrollo un prototipo de Internet de las Cosas (IoT) destinado a medir variables ambientales relevantes para el bienestar de la comunidad educativa en la Universidad Popular del Cesar, Seccional Aguachica."
-  style="Tailwind CSS"
-  title="Desarrollo de un Prototipo de IoT para Medir Variables Ambientales"
-  frontend="Next.js"
-  backend="FastAPI"
-  />
-    <SobreMy/>
+    <Proyects
+      description="Se desarrollo un prototipo de Internet de las Cosas (IoT) destinado a medir variables ambientales relevantes para el bienestar de la comunidad educativa en la Universidad Popular del Cesar, Seccional Aguachica."
+      style="Tailwind CSS"
+      title="Desarrollo de un Prototipo de IoT para Medir Variables Ambientales"
+      frontend="Next.js"
+      backend="FastAPI"
+    />
+    <SobreMy />
   </div>
 </main>
-
