@@ -1,13 +1,3 @@
----
-interface Props {
-  endpoint?: string;
-}
-
-const {
-  endpoint = "https://formspree.io/f/mkolezkg",
-} = Astro.props;
----
-
 <section id="servicios" class="services-section">
   <div class="services-container">
     <div class="services-content">
@@ -23,22 +13,45 @@ const {
       <div class="services-list">
         <article>
           <h3>Páginas web</h3>
-          <p>Landing pages, portafolios, sitios corporativos y páginas informativas.</p>
+          <p>
+            Landing pages, portafolios, sitios corporativos y páginas
+            informativas.
+          </p>
         </article>
 
         <article>
           <h3>Sistemas web</h3>
-          <p>Dashboards, paneles administrativos, módulos internos y formularios.</p>
+          <p>
+            Dashboards, paneles administrativos, módulos internos y formularios.
+          </p>
         </article>
 
         <article>
           <h3>Optimización</h3>
-          <p>Mejoras de diseño, rendimiento, responsive y experiencia de usuario.</p>
+          <p>
+            Mejoras de diseño, rendimiento, responsive y experiencia de usuario.
+          </p>
         </article>
       </div>
     </div>
 
-    <form class="contact-form" action={endpoint} method="POST">
+    <form
+      name="contacto"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/mensaje-confirmado"
+      class="contact-form"
+      method="POST"
+    >
+      <input type="hidden" name="form-name" value="contacto" />
+
+      <p class="hidden">
+        <label>
+          No llenar este campo:
+          <input name="bot-field" />
+        </label>
+      </p>
+
       <div class="form-header">
         <h3>Solicita tu servicio</h3>
         <p>Déjame tus datos y te responderé lo antes posible.</p>
@@ -84,8 +97,12 @@ const {
         <select name="presupuesto">
           <option value="">Selecciona una opción</option>
           <option value="Menos de $500.000 COP">Menos de $500.000 COP</option>
-          <option value="$500.000 - $1.500.000 COP">$500.000 - $1.500.000 COP</option>
-          <option value="$1.500.000 - $3.000.000 COP">$1.500.000 - $3.000.000 COP</option>
+          <option value="$500.000 - $1.500.000 COP">
+            $500.000 - $1.500.000 COP
+          </option>
+          <option value="$1.500.000 - $3.000.000 COP">
+            $1.500.000 - $3.000.000 COP
+          </option>
           <option value="Más de $3.000.000 COP">Más de $3.000.000 COP</option>
           <option value="No estoy seguro">No estoy seguro</option>
         </select>
@@ -97,15 +114,16 @@ const {
           name="mensaje"
           rows="5"
           placeholder="Ej: necesito una página web para mostrar mis servicios, recibir clientes y tener botón de WhatsApp..."
-          required
-        ></textarea>
+          required></textarea>
       </label>
 
-      <input type="hidden" name="_subject" value="Nueva solicitud de servicio web" />
+      <input
+        type="hidden"
+        name="_subject"
+        value="Nueva solicitud de servicio web"
+      />
 
-      <button type="submit">
-        Enviar solicitud
-      </button>
+      <button type="submit">Enviar solicitud</button>
     </form>
   </div>
 </section>
@@ -115,7 +133,11 @@ const {
     width: 100%;
     padding: 80px 20px;
     background:
-      radial-gradient(circle at top left, rgba(10, 233, 138, 0.18), transparent 35%),
+      radial-gradient(
+        circle at top left,
+        rgba(10, 233, 138, 0.18),
+        transparent 35%
+      ),
       linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
   }
 
@@ -238,7 +260,10 @@ const {
     font: inherit;
     outline: none;
     box-sizing: border-box;
-    transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+    transition:
+      border-color 200ms ease,
+      box-shadow 200ms ease,
+      background-color 200ms ease;
   }
 
   textarea {
@@ -264,7 +289,10 @@ const {
     font-weight: 800;
     font-size: 15px;
     cursor: pointer;
-    transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+    transition:
+      transform 200ms ease,
+      box-shadow 200ms ease,
+      background 200ms ease;
   }
 
   button:hover {
