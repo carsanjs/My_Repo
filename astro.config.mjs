@@ -6,7 +6,9 @@ import Icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  output:"static",
   integrations: [react({
+
     include: ['**/react/*'],
     experimentalReactChildren: true
   }), tailwind(), Icon()]
