@@ -1,121 +1,485 @@
 ---
-import SobreMy from "../components/Sobremi/SobreMy.astro";
-import Proyects from "../components/Proyects/Proyects.astro";
-import ButtonDT from "../components/Button/ButtonDT.astro";
+import Linka from "./Button/Linka.astro";
 ---
 
-<main class="px-4">
-  <section
-    class="section py-16 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
-  >
-    <div class="max-w-xl">
-      <div class="flex gap-4 mb-4">
-        <img
-          class="rounded-full border-black shadow-lg size-16"
-          src="https://avatars.githubusercontent.com/u/105553158?v=4"
-          alt="Carlos Sanchez Carrascal"
-        />
-        <a
-          href="https://www.linkedin.com/in/casc25/"
-          target="_blank"
-          rel="noopener"
-          class="flex items-center transition md:justify-center md:hover:scale-105"
-        >
-          <div class="flex items-center">
-            <span
-              class="relative inline-flex overflow-hidden rounded-full p-[1px]"
-            >
-              <!-- <span
-                class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]"
-              ></span> -->
-              <!-- <div
-                class="btnDT inline-flex items-center justify-center w-full px-3 py-1 text-sm text-violet-800 bg-violet-200 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
-              >
-                Disponible para trabajar
-              </div> -->
-              <ButtonDT title="Disponible para trabajar" />
-            </span>
-          </div>
-        </a>
+<main class="portfolio-main">
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="profile-row">
+          <img
+            class="profile-image"
+            src="https://avatars.githubusercontent.com/u/105553158?v=4"
+            alt="Carlos Sanchez Carrascal"
+          />
+
+          <Linka
+            href="https://www.linkedin.com/in/casc25/"
+            target="_blank"
+            title="Contáctame"
+          />
+        </div>
+
+        <span class="hero-badge">Disponible para nuevos proyectos</span>
+
+        <h1>Hey, soy Carlos Sánchez</h1>
+
+        <p class="hero-description">
+          <strong>Ingeniero de Sistemas</strong> y
+          <strong>Desarrollador Web</strong> de Colombia 🇨🇴. Creo sitios web
+          modernos, rápidos y funcionales para negocios, marcas personales y
+          proyectos digitales.
+        </p>
+
+        <div class="hero-actions">
+          <!-- <a
+            href="/trabajos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="primary-link"
+          >
+            Ver mis trabajos
+          </a> -->
+
+          <a href="mailto:carlosstqm2225@gmail.com" class="secondary-link">
+            Escribirme
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/casc25/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="secondary-link"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
-      <h1
-        class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-      >
-        Hey, soy carlos sanchez
-      </h1>
-      <p
-        class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-violet-700 [&>strong]:font-semibold dark:text-gray-300"
-      >
-        &lt;1 años de experiencia.
-        <strong>Ingeniero de Sistemas </strong> y<strong>
-          Desarrollador Web</strong
-        >
-        de Aguachica - Cesar, 
-        <span class="text-yellow-500">Col</span><span class="text-blue-700">omb</span><span class="text-red-700">ia</span> 🇪s<em class="text-violet-700">.</em>
-      </p>
-      <nav class="flex flex-wrap gap-4 mt-8">
-        <a
-          href="mailto:carlosstqm2225@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          role="link"
-          class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-        >
-          <svg
-            class="size-4"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"
-            ></path><path d="M3 6l9 6l9 -6"></path><path d="M15 18h6"
-            ></path><path d="M18 15l3 3l-3 3"></path></svg
-          >
-          Contáctame
-        </a>
-        <a
-          href="https://www.linkedin.com/in/casc25/"
-          target="_blank"
-          rel="noopener noreferrer"
-          role="link"
-          class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-        >
-          <svg
-            class="size-4"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-            ></path><path d="M8 11l0 5"></path><path d="M8 8l0 .01"></path><path
-              d="M12 16l0 -5"></path><path d="M16 16v-3a2 2 0 0 0 -4 0"
-            ></path></svg
-          >
-          LinkedIn
-        </a>
-      </nav>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-glow"></div>
+
+        <div class="code-card card-main">
+          <div class="card-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="code-lines">
+            <span class="line line-lg"></span>
+            <span class="line line-md"></span>
+            <span class="line line-sm"></span>
+            <span class="line line-xl"></span>
+          </div>
+
+          <div class="floating-badge badge-astro">Astro</div>
+          <div class="floating-badge badge-web">Web</div>
+          <div class="floating-badge badge-ui">UI</div>
+        </div>
+      </div>
     </div>
   </section>
-  <div class="space-y-24">
-    <Proyects
-      description="Se desarrollo un prototipo de Internet de las Cosas (IoT) destinado a medir variables ambientales relevantes para el bienestar de la comunidad educativa en la Universidad Popular del Cesar, Seccional Aguachica."
-      style="Tailwind CSS"
-      title="Desarrollo de un Prototipo de IoT para Medir Variables Ambientales"
-      frontend="Next.js"
-      backend="FastAPI"
-    />
-    <SobreMy />
-  </div>
 </main>
+
+<style>
+  .portfolio-main {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 96px 20px 80px;
+    background:
+      radial-gradient(circle at top left, rgba(10, 233, 138, 0.24), transparent 34%),
+      radial-gradient(circle at bottom right, rgba(30, 144, 255, 0.18), transparent 30%),
+      linear-gradient(135deg, #0f172a 0%, #111827 55%, #020617 100%);
+  }
+
+  .hero-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 46px;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .profile-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 26px;
+  }
+
+  .profile-image {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 3px solid rgba(10, 233, 138, 0.8);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background-color: rgba(10, 233, 138, 0.12);
+    border: 1px solid rgba(10, 233, 138, 0.34);
+    color: #0ae98a;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 0.96;
+    letter-spacing: -2px;
+    font-weight: 950;
+  }
+
+  .hero-description {
+    max-width: 690px;
+    margin: 26px 0 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: clamp(18px, 2.5vw, 23px);
+    line-height: 1.65;
+  }
+
+  .hero-description strong {
+    color: #0ae98a;
+    font-weight: 850;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .primary-link,
+  .secondary-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    transition:
+      transform 200ms ease,
+      box-shadow 200ms ease,
+      background 200ms ease,
+      color 200ms ease,
+      border-color 200ms ease;
+  }
+
+  .primary-link {
+    color: #141515;
+    background-color: #0ae98a;
+    box-shadow: 0 14px 30px rgba(10, 233, 138, 0.22);
+  }
+
+  .primary-link:hover {
+    background: linear-gradient(
+      211deg,
+      rgba(30, 144, 255, 1) 36%,
+      rgba(10, 233, 138, 1) 52%
+    );
+    transform: translateY(-2px);
+  }
+
+  .secondary-link {
+    color: rgba(255, 255, 255, 0.88);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .secondary-link:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.13);
+    border-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-2px);
+  }
+
+  .hero-visual {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+  }
+
+  .visual-glow {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(10, 233, 138, 0.5), transparent 65%);
+    filter: blur(20px);
+    animation: pulseGlow 4s ease-in-out infinite;
+  }
+
+  .code-card {
+    position: relative;
+    width: min(100%, 390px);
+    min-height: 270px;
+    padding: 22px;
+    border-radius: 28px;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.06)),
+      rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow:
+      0 35px 90px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    transform: rotateY(-12deg) rotateX(8deg);
+    animation: floatCard 5s ease-in-out infinite;
+  }
+
+  .card-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .card-header span {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .card-header span:nth-child(1) {
+    background-color: #ff5f57;
+  }
+
+  .card-header span:nth-child(2) {
+    background-color: #ffbd2e;
+  }
+
+  .card-header span:nth-child(3) {
+    background-color: #0ae98a;
+  }
+
+  .code-lines {
+    display: grid;
+    gap: 14px;
+  }
+
+  .line {
+    display: block;
+    height: 14px;
+    border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 233, 138, 0.95),
+      rgba(30, 144, 255, 0.75)
+    );
+    box-shadow: 0 0 24px rgba(10, 233, 138, 0.24);
+  }
+
+  .line-lg {
+    width: 86%;
+  }
+
+  .line-md {
+    width: 68%;
+  }
+
+  .line-sm {
+    width: 46%;
+  }
+
+  .line-xl {
+    width: 94%;
+  }
+
+  .floating-badge {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    color: #141515;
+    background-color: #0ae98a;
+    font-size: 13px;
+    font-weight: 950;
+    box-shadow: 0 18px 34px rgba(10, 233, 138, 0.28);
+  }
+
+  .badge-astro {
+    top: -18px;
+    right: 28px;
+  }
+
+  .badge-web {
+    left: -18px;
+    bottom: 76px;
+    background-color: #1e90ff;
+    color: #ffffff;
+  }
+
+  .badge-ui {
+    right: -14px;
+    bottom: 32px;
+    background-color: #ffffff;
+    color: #111827;
+  }
+
+  .scroll-tool {
+    position: absolute;
+    right: 16px;
+    bottom: 0;
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    padding: 14px 12px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+  }
+
+  .scroll-track {
+    width: 28px;
+    height: 52px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  .scroll-track span {
+    width: 5px;
+    height: 9px;
+    border-radius: 999px;
+    background-color: #0ae98a;
+    animation: scrollDot 1.4s ease-in-out infinite;
+  }
+
+  .scroll-tool p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  @keyframes floatCard {
+    0%,
+    100% {
+      transform: rotateY(-12deg) rotateX(8deg) translateY(0);
+    }
+
+    50% {
+      transform: rotateY(-8deg) rotateX(5deg) translateY(-16px);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%,
+    100% {
+      opacity: 0.65;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.12);
+    }
+  }
+
+  @keyframes scrollDot {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+      min-height: 360px;
+    }
+
+    .code-card {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-section {
+      min-height: auto;
+      padding: 72px 16px 58px;
+    }
+
+    .profile-image {
+      width: 64px;
+      height: 64px;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .primary-link,
+    .secondary-link {
+      width: 100%;
+    }
+
+    .hero-visual {
+      min-height: 320px;
+    }
+
+    .code-card {
+      width: 100%;
+      min-height: 240px;
+      padding: 20px;
+      border-radius: 22px;
+    }
+
+    .badge-web {
+      left: 12px;
+      bottom: 54px;
+    }
+
+    .badge-ui {
+      right: 12px;
+      bottom: 20px;
+    }
+
+    .scroll-tool {
+      display: none;
+    }
+  }
+</style>

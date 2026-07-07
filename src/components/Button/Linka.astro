@@ -1,0 +1,60 @@
+---
+interface Props {
+  title: string;
+  href?: string;
+  target?: "_blank" | "_self" | "_parent" | "_top";
+}
+
+const { title, href = "#", target = "_self" } = Astro.props;
+---
+
+<a
+  rel={target === "_blank" ? "noopener noreferrer" : undefined}
+  href={href}
+  target={target}
+  class="a-custom md:justify-center dark:bg-gray-800 dark:text-white/80"
+>
+  <span class="font-semibold text-sm">{title}</span>
+</a>
+
+<style>
+  .a-custom {
+    color: #141515;
+    background-color: #0ae98a;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 40px;
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    line-height: 1;
+    transform: none;
+    margin: 0;
+  }
+
+  .a-custom:hover {
+    background: linear-gradient(
+      211deg,
+      rgba(30, 144, 255, 1) 36%,
+      rgba(10, 233, 138, 1) 52%
+    );
+  }
+
+  .a-custom span {
+    display: inline-flex;
+    align-items: center;
+
+  }
+</style>

@@ -1,0 +1,311 @@
+---
+interface Props {
+  endpoint?: string;
+}
+
+const {
+  endpoint = "https://formspree.io/f/mkolezkg",
+} = Astro.props;
+---
+
+<section id="servicios" class="services-section">
+  <div class="services-container">
+    <div class="services-content">
+      <span class="services-badge">Desarrollo Web</span>
+
+      <h2>¿Necesitas una página web o una plataforma para tu negocio?</h2>
+
+      <p>
+        Cuéntame qué necesitas y te ayudaré a crear una solución web moderna,
+        rápida y adaptada a tu proyecto.
+      </p>
+
+      <div class="services-list">
+        <article>
+          <h3>Páginas web</h3>
+          <p>Landing pages, portafolios, sitios corporativos y páginas informativas.</p>
+        </article>
+
+        <article>
+          <h3>Sistemas web</h3>
+          <p>Dashboards, paneles administrativos, módulos internos y formularios.</p>
+        </article>
+
+        <article>
+          <h3>Optimización</h3>
+          <p>Mejoras de diseño, rendimiento, responsive y experiencia de usuario.</p>
+        </article>
+      </div>
+    </div>
+
+    <form class="contact-form" action={endpoint} method="POST">
+      <div class="form-header">
+        <h3>Solicita tu servicio</h3>
+        <p>Déjame tus datos y te responderé lo antes posible.</p>
+      </div>
+
+      <div class="form-grid">
+        <label>
+          Nombre completo
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Ej: Carlos Sánchez"
+            required
+          />
+        </label>
+
+        <label>
+          Correo electrónico
+          <input
+            type="email"
+            name="email"
+            placeholder="correo@ejemplo.com"
+            required
+          />
+        </label>
+      </div>
+
+      <label>
+        Tipo de servicio
+        <select name="servicio" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Página web">Página web</option>
+          <option value="Landing page">Landing page</option>
+          <option value="Sistema web">Sistema web</option>
+          <option value="Tienda online">Tienda online</option>
+          <option value="Mejoras de diseño">Mejoras de diseño</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </label>
+
+      <label>
+        Presupuesto aproximado
+        <select name="presupuesto">
+          <option value="">Selecciona una opción</option>
+          <option value="Menos de $500.000 COP">Menos de $500.000 COP</option>
+          <option value="$500.000 - $1.500.000 COP">$500.000 - $1.500.000 COP</option>
+          <option value="$1.500.000 - $3.000.000 COP">$1.500.000 - $3.000.000 COP</option>
+          <option value="Más de $3.000.000 COP">Más de $3.000.000 COP</option>
+          <option value="No estoy seguro">No estoy seguro</option>
+        </select>
+      </label>
+
+      <label>
+        Cuéntame sobre tu proyecto
+        <textarea
+          name="mensaje"
+          rows="5"
+          placeholder="Ej: necesito una página web para mostrar mis servicios, recibir clientes y tener botón de WhatsApp..."
+          required
+        ></textarea>
+      </label>
+
+      <input type="hidden" name="_subject" value="Nueva solicitud de servicio web" />
+
+      <button type="submit">
+        Enviar solicitud
+      </button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .services-section {
+    width: 100%;
+    padding: 80px 20px;
+    background:
+      radial-gradient(circle at top left, rgba(10, 233, 138, 0.18), transparent 35%),
+      linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  }
+
+  .services-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .services-badge {
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background-color: #0ae98a;
+    color: #141515;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .services-content h2 {
+    margin: 0;
+    color: #111827;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+  }
+
+  .services-content > p {
+    margin: 0;
+    max-width: 620px;
+    color: #4b5563;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 10px;
+  }
+
+  .services-list article {
+    padding: 18px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  }
+
+  .services-list h3 {
+    margin: 0 0 8px;
+    color: #111827;
+    font-size: 16px;
+  }
+
+  .services-list p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .contact-form {
+    padding: 30px;
+    border-radius: 26px;
+    background-color: #ffffff;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .form-header h3 {
+    margin: 0 0 6px;
+    color: #111827;
+    font-size: 26px;
+  }
+
+  .form-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 15px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 13px 14px;
+    color: #111827;
+    background-color: #f9fafb;
+    font: inherit;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 130px;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #0ae98a;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(10, 233, 138, 0.18);
+  }
+
+  button {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 14px;
+    background-color: #0ae98a;
+    color: #141515;
+    font-weight: 800;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+  }
+
+  button:hover {
+    background: linear-gradient(
+      211deg,
+      rgba(30, 144, 255, 1) 36%,
+      rgba(10, 233, 138, 1) 52%
+    );
+    box-shadow: 0 14px 30px rgba(10, 233, 138, 0.25);
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 900px) {
+    .services-container {
+      grid-template-columns: 1fr;
+    }
+
+    .services-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-section {
+      padding: 56px 16px;
+    }
+
+    .contact-form {
+      padding: 22px;
+      border-radius: 22px;
+    }
+
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .services-content h2 {
+      letter-spacing: -0.8px;
+    }
+  }
+</style>

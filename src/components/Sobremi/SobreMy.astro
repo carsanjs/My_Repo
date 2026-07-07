@@ -1,57 +1,142 @@
-<section
-      id="sobre-mi"
-      data-section="sobre-mi"
-      class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
-    >
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-      >
-        <svg
-          class="size-8"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-            d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path><path
-            d="M6 21v-2a4 4 0 0 1 4 -4h4"></path><path d="M15 19l2 2l4 -4"
-          ></path></svg
-        >
-        Sobre mí
-      </h2>
-      <article
-        class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
-      >
-        <div
-          class="[&>p]:mb-4 [&>p>strong]:text-violet-700 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-semibold [&>p>strong]:font-mono text-pretty order-2 md:order-1"
-        >
-          <p>
-            Me llamo Carlos Sanchez. Mi interés por la programación comenzó desde que empecé a experimentar con tecnología como parte de mi formación en Ingeniería en Sistemas.
-            Recientemente he completado con éxito mi proyecto de grado titulado<strong class="font-bold"
-              > Desarrollo de un Prototipo de IoT para Medir Variables Ambientales</strong
-            >.
-          </p>
-          <p>
-            Aunque aún estoy esperando mi fecha de graduación como Ingeniero en Sistemas, estoy completamente dedicado a buscar oportunidades laborales que me permitan aplicar mis habilidades y conocimientos adquiridos durante mi formación académica.
-          </p>
+<section id="sobre-mi" class="about-section">
+  <div class="about-container">
+    <div class="about-card">
+      <div class="about-content">
+        <span class="section-badge">Sobre mí</span>
 
-          <p>
-            Estoy abierto a asumir nuevos desafíos y estoy dispuesto a trabajar arduamente para desarrollarme profesionalmente. 
-            <strong>Mi enfoque</strong> se centra en contribuir de manera significativa al crecimiento y éxito de la organización donde pueda colaborar, 
-            demostrando mi compromiso y dedicación en cada tarea que se me asigne.
-          </p>
-        </div>
-        <img
-          width="200"
-          height="200"
-          src="https://avatars.githubusercontent.com/u/105553158?v=4"
-          alt="Carlos Sanchez"
-          class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
-          style="object-position: 50% 50%"
-        />
-      </article>
-    </section>
+        <h2>
+          Desarrollo soluciones web que se ven bien y funcionan mejor
+        </h2>
+
+        <p>
+          Soy Carlos Sánchez, Ingeniero de Sistemas y Desarrollador Web.
+          Me enfoco en crear páginas, portafolios, landing pages y sistemas web
+          con interfaces limpias, modernas y adaptadas a cada necesidad.
+        </p>
+
+        <p>
+          Mi objetivo es ayudar a negocios, profesionales y emprendimientos a
+          tener presencia digital, captar clientes y organizar mejor sus procesos
+          mediante herramientas web.
+        </p>
+      </div>
+
+      <div class="about-stats">
+        <article>
+          <strong>3+</strong>
+          <span>Años de experiencia</span>
+        </article>
+
+        <article>
+          <strong>Web</strong>
+          <span>Diseño responsive</span>
+        </article>
+
+        <article>
+          <strong>UX/UI</strong>
+          <span>Interfaces claras</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    width: 100%;
+    padding: 84px 20px;
+    background-color: #ffffff;
+  }
+
+  .about-container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .about-card {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 34px;
+    align-items: center;
+    padding: 34px;
+    border-radius: 30px;
+    background:
+      radial-gradient(circle at top left, rgba(10, 233, 138, 0.18), transparent 34%),
+      linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+  }
+
+  .section-badge {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 14px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background-color: #0ae98a;
+    color: #141515;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .about-content h2 {
+    margin: 0;
+    color: #111827;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -1.4px;
+  }
+
+  .about-content p {
+    margin: 18px 0 0;
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .about-stats {
+    display: grid;
+    gap: 16px;
+  }
+
+  .about-stats article {
+    padding: 24px;
+    border-radius: 22px;
+    background-color: #ffffff;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  }
+
+  .about-stats strong {
+    display: block;
+    color: #111827;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 950;
+  }
+
+  .about-stats span {
+    display: block;
+    margin-top: 8px;
+    color: #6b7280;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 850px) {
+    .about-card {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .about-section {
+      padding: 62px 16px;
+    }
+
+    .about-card {
+      padding: 22px;
+      border-radius: 24px;
+    }
+  }
+</style>

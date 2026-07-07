@@ -1,0 +1,123 @@
+<!-- ---
+import WorksSection from "../components/works/working.astro";
+import AboutSection from "../components/Sobremi/SobreMy.astro";
+import ContactSection from "../components/Contact/contactos.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="es">
+  <head>
+    <title>Trabajos | Carlos Sánchez</title>
+    <meta
+      name="description"
+      content="Trabajos, servicios y contacto de Carlos Sánchez, desarrollador web."
+    />
+  </head>
+
+  <body>
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-container">
+          <a href="/" class="back-link">← Volver al inicio</a>
+
+          <span class="page-badge">Portafolio</span>
+
+          <h1>Trabajos, experiencia y contacto</h1>
+
+          <p>
+            Aquí puedes conocer algunos de mis trabajos, mi enfoque como
+            desarrollador web y las formas de contacto para iniciar un proyecto.
+          </p>
+        </div>
+      </section>
+
+      <WorksSection />
+
+      <AboutSection />
+
+      <ContactSection />
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-hero {
+    width: 100%;
+    padding: 90px 20px 76px;
+    background:
+      radial-gradient(circle at top left, rgba(10, 233, 138, 0.22), transparent 34%),
+      radial-gradient(circle at bottom right, rgba(30, 144, 255, 0.16), transparent 30%),
+      linear-gradient(135deg, #0f172a 0%, #111827 55%, #020617 100%);
+  }
+
+  .page-hero-container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 42px;
+    margin-bottom: 28px;
+    padding: 10px 15px;
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.86);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    transition:
+      background 200ms ease,
+      transform 200ms ease,
+      border-color 200ms ease;
+  }
+
+  .back-link:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-2px);
+  }
+
+  .page-badge {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background-color: rgba(10, 233, 138, 0.12);
+    border: 1px solid rgba(10, 233, 138, 0.34);
+    color: #0ae98a;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .page-hero h1 {
+    max-width: 850px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+    font-weight: 950;
+  }
+
+  .page-hero p {
+    max-width: 720px;
+    margin: 24px 0 0;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: clamp(18px, 2.5vw, 22px);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 640px) {
+    .page-hero {
+      padding: 72px 16px 58px;
+    }
+  }
+</style> -->
